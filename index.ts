@@ -5,7 +5,7 @@ const app = express();
 
 app.use(morgan('tiny'))
 
-const PORT = 3002;
+const PORT = 3001;
 
 let counter = 0;
 

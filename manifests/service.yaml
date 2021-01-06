@@ -8,5 +8,5 @@ spec:
     app: ping-pong-application 
   ports:
     - protocol: TCP
-      port: 2345 
-      targetPort: 3002 
+      port: 2347 
+      targetPort: 3001 
