@@ -9,7 +9,7 @@ const PORT = 3001;
 
 let counter = 0;
 
-app.get('/pingpong', (_req, res) => {
+app.get('/', (_req, res) => {
   res.send(`pong ${counter}`);
   counter++;
 })
