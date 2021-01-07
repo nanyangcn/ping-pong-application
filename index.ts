@@ -7,7 +7,7 @@ const app = express();
 app.use(morgan('tiny'));
 
 const PORT = 3001;
-const PATH = '/tmp/kube';
+const PATH = './files';
 let counter = 0;
 
 app.get('/', (_req, res) => {
