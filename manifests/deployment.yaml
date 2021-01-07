@@ -19,3 +19,6 @@ spec:
       containers:
         - name: ping-pong-application
           image: nanyangcn/ping-pong-application
+          volumeMounts:
+          - name: shared-image
+            mountPath: /usr/src/app/files
