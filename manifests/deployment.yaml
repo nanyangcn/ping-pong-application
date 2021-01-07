@@ -12,6 +12,10 @@ spec:
       labels:
         app: ping-pong-application
     spec:
+      volumes:
+        - name: shared-image
+          persistentVolumeClaim:
+            claimName: main-application-claim
       containers:
         - name: ping-pong-application
           image: nanyangcn/ping-pong-application
