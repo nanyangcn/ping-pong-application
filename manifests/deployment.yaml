@@ -12,13 +12,13 @@ spec:
       labels:
         app: ping-pong-application
     spec:
-      volumes:
-        - name: shared-image
-          persistentVolumeClaim:
-            claimName: main-application-claim
+      # volumes:
+      #   - name: shared-image
+      #     persistentVolumeClaim:
+      #       claimName: main-application-claim
       containers:
         - name: ping-pong-application
           image: nanyangcn/ping-pong-application
-          volumeMounts:
-          - name: shared-image
-            mountPath: /usr/src/app/files
+          # volumeMounts:
+          # - name: shared-image
+          #   mountPath: /usr/src/app/files

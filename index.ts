@@ -6,7 +6,7 @@ const app = express();
 
 app.use(morgan('tiny'));
 
-const PORT = 3001;
+const PORT = 3002;
 const PATH = './files';
 let counter = 0;
 
@@ -17,6 +17,10 @@ app.get('/', (_req, res) => {
   counter++;
   res.send(`pong ${counter}`);
   writeFile();
+});
+
+app.get('/inquire', (_req, res) => {
+  res.send(`Ping / Pong: ${counter}`);
 });
 
 app.listen(PORT, () => {
