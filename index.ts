@@ -10,10 +10,13 @@ const PORT = 3001;
 const PATH = './files';
 let counter = 0;
 
+const writeFile = () => fs.writeFileSync(`${PATH}/ping-pong.txt`, `Ping / Pong: ${counter}`);
+writeFile();
+
 app.get('/', (_req, res) => {
   counter++;
   res.send(`pong ${counter}`);
-  fs.writeFileSync(`${PATH}/ping-pong.txt`, `Ping / Pong: ${counter}`);
+  writeFile();
 });
 
 app.listen(PORT, () => {
