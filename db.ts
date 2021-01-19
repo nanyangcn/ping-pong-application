@@ -6,7 +6,7 @@ const pool = new Pool({
   user: 'postgres',
   password: 'a5630726',
   database: 'postgres',
-  host: 'localhost',//'ping-pong-db-svc',
+  host: 'ping-pong-db-svc',
   port: 5432
 });
 
