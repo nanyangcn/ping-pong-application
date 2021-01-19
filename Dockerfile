@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY package.json .
 COPY tsconfig.json .
-COPY index.ts .
+COPY index.ts db.ts ./
 
 RUN yarn && \
     yarn tsc
