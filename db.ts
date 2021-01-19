@@ -13,7 +13,7 @@ const pool = new Pool({
   port: 5432
 });
 
-const dbInit = async () => {
+export const dbInit = async (): Promise<void> => {
   try {
     await pool.query('CREATE TABLE IF NOT EXISTS pingpong(id SERIAL PRIMARY KEY, counter INT NOT NULL)');
     await pool.query('INSERT INTO pingpong(id, counter) VALUES(1, 0) ON CONFLICT (id) DO NOTHING');
