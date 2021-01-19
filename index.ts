@@ -28,8 +28,9 @@ app.get('/', async (_req, res) => {
 // eslint-disable-next-line @typescript-eslint/no-misused-promises
 app.get('/inquire', async (_req, res) => {
   const response = await pool.query('SELECT counter FROM pingpong WHERE id = 1');
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-  const counter = response.rows[0]?.counter as number;
+  const rows = parseRows(response.rows);
+    if (!rows[0]) throw new Error('rows is empty');
+    const counter = rows[0].counter;
   res.send(`Ping / Pong: ${counter}`);
 });
 
