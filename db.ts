@@ -1,11 +1,14 @@
 import pg from 'pg';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const Pool = pg.Pool;
 
 const pool = new Pool({
-  user: 'postgres',
-  password: 'a5630726',
-  database: 'postgres',
+  user: process.env.POSTGRES_USER,
+  password: process.env.POSTGRES_PASSWORD,
+  database: process.env.POSTGRES_DB,
   host: 'ping-pong-db-svc',
   port: 5432
 });
