@@ -29,7 +29,7 @@ app.get('/', async (_req, res) => {
 app.get('/inquire', async (_req, res) => {
   const response = await pool.query('SELECT counter FROM pingpong WHERE id = 1');
   const rows = parseRows(response.rows);
-    if (!rows[0]) throw new Error('rows is empty');
+  if (!rows[0]) throw new Error('rows is empty');
     const counter = rows[0].counter;
   res.send(`Ping / Pong: ${counter}`);
 });
