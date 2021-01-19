@@ -22,7 +22,7 @@ spec:
           image: nanyangcn/ping-pong-application
           envFrom:
           - secretRef:
-            name: ping-pong-db-secret
+              name: ping-pong-db-secret
           # volumeMounts:
           # - name: shared-image
           #   mountPath: /usr/src/app/files
