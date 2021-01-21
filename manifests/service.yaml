@@ -4,7 +4,7 @@ metadata:
   namespace: main-application-namespace
   name: ping-pong-application-svc
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: ping-pong-application 
   ports:
