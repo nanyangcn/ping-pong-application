@@ -4,10 +4,10 @@ metadata:
   namespace: main-application-namespace
   name: ping-pong-application-svc
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: ping-pong-application 
   ports:
     - protocol: TCP
-      port: 2347 
+      port: 80 
       targetPort: 3002 

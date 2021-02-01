@@ -11,7 +11,7 @@ app.use(morgan('tiny'));
 const PORT = 3002;
 
 // eslint-disable-next-line @typescript-eslint/no-misused-promises
-app.get('/pingpong', async (_req, res) => {
+app.get('/', async (_req, res) => {
   try {
     await dbInit();
     const response = await pool.query('SELECT counter FROM pingpong WHERE id = 1');
