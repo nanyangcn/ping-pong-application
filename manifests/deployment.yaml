@@ -23,3 +23,9 @@ spec:
           envFrom:
           - secretRef:
               name: ping-pong-db-secret
+          readinessProbe:
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            httpGet:
+              path: /inquire
+              port: 3002
